@@ -11,7 +11,9 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins(
-                    "https://billitbackend-production.up.railway.app"// URL del backend in produzione
+                    "http://localhost:3000",
+                    "https://billitbackend-production.up.railway.app"
+                    // URL del backend in produzione
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Metodi HTTP permessi
                 .allowedHeaders("Authorization", "Content-Type", "X-Requested-With", "Accept") // Headers permessi
